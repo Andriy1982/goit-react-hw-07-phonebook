@@ -22,15 +22,5 @@ export const isLoading = createReducer(false, {
 });
 
 export const filter = createReducer('', {
-  [actions.changeFilter]: (state, { payload }) => payload,
+  [actions.changeFilter]: (_, { payload }) => payload,
 });
-
-// export default combineReducers({
-//   contacts,
-//   filter,
-//   isLoading,
-// });
-// const reducer = { contacts, filter,isLoading}
-// console.log(reducer);
-
-// export default reducer;

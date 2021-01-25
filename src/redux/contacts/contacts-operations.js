@@ -7,7 +7,6 @@ const fetchContacts = () => async dispatch => {
   dispatch(action.fetchContactRequest());
   try {
     const response = await axios.get('/contacts');
-    // console.log(response);
     dispatch(action.fetchContactSuccess(response.data));
   } catch (error) {
     dispatch(action.fetchContactError(error));
